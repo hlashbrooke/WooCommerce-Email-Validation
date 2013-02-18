@@ -28,11 +28,9 @@ Installing "WooCommerce Email Validation" can be done either by searching for "W
 1. Upload the ZIP file through the 'Plugins > Add New > Upload' screen in your WordPress dashboard
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
-== Frequently Asked Questions ==
-
 == Screenshots ==
 
-1. The confirm email address field as it is displayed in the Twentytwelve theme
+1. The confirm email address field as it is displayed in the Twenty Twelve theme
 
 == Changelog ==
 
