@@ -14,7 +14,7 @@ Adds a 'confirm email address' field to the WooCommerce checkout page.
 
 "WooCommerce Email Validation" is a small extension for WooCommerce that adds a 'confirm email address' field to the checkout page as a required field. This will ensure that your customers will enter a correct email address, making managing your orders far easier and more reliable. If a customer's email address does not match up then they will receive a standard validation error on the checkout page informing them that they need to make sure that their email addresses are the same.
 
-This extension is WooCommerce 2.0 and WPML compatible.
+This extension is WooCommerce 2.x compatible and supports localisation using WPML.
 
 == Usage ==
 
