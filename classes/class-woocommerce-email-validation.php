@@ -24,7 +24,7 @@ class WooCommerce_Email_Validation {
 
 		// Ensure email addresses match
 		add_filter( 'woocommerce_process_checkout_field_billing_email-2' , array( &$this , 'validate_email_address' ) );
-		
+
 	}
 
 	public function add_checkout_field( $fields ) {
@@ -45,8 +45,8 @@ class WooCommerce_Email_Validation {
 		global $woocommerce;
 
 		$billing_email = $woocommerce->checkout->posted['billing_email'];
-		
-		if( $confirm_email != $billing_email ) {
+
+		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
 			$woocommerce->add_error( sprintf( __( '%1$sEmail addresses%2$s do not match.' , 'wc_emailvalidation' ) , '<strong>' , '</strong>' ) );
 		}
 
@@ -60,9 +60,9 @@ class WooCommerce_Email_Validation {
 	public function load_plugin_textdomain () {
 		$domain = 'wc_emailvalidation';
 	    $locale = apply_filters( 'plugin_locale' , get_locale() , $domain );
-	 
+
 	    load_textdomain( $domain , WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
 	    load_plugin_textdomain( $domain , FALSE , dirname( plugin_basename( $this->file ) ) . '/lang/' );
 	}
-	
+
 }

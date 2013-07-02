@@ -4,7 +4,7 @@ Donate link: http://www.hughlashbrooke.com/donate/
 Tags: woocommerce, email, validation, checkout
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,11 +38,19 @@ Installing "WooCommerce Email Validation" can be done either by searching for "W
 
 == Changelog ==
 
+= 1.1 =
+* 2013-05-24
+* [FIX] Fixing validation to be case-insensitive
+
 = 1.0 =
 * 2013-02-18
 * Initial release!
 
 == Upgrade Notice ==
+
+= 1.1 =
+* 2013-05-24
+* Fixing validation to be case-insensitive
 
 = 1.0 =
 * 2013-02-18
