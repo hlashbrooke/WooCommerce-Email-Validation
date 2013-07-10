@@ -40,7 +40,7 @@ Installing "WooCommerce Email Validation" can be done either by searching for "W
 
 = 1.2 =
 * 2013-07-11
-* [UPATE] Adding German translation (translation by Dietmar Hohn)
+* [UPATE] Adding German translation (translation provided by Dietmar Hohn)
 
 = 1.1 =
 * 2013-05-24
@@ -54,7 +54,7 @@ Installing "WooCommerce Email Validation" can be done either by searching for "W
 
 = 1.2 =
 * 2013-07-11
-* Adding German translation (translation by Dietmar Hohn)
+* Adding German translation (translation provided by Dietmar Hohn)
 
 = 1.1 =
 * 2013-05-24
