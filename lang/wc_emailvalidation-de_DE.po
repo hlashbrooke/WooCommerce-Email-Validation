@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Email Validation v1.1\n"
+"Project-Id-Version: WooCommerce Email Validation v1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-07-09 21:44+0100\n"
+"PO-Revision-Date: 2013-07-19 10:32:26+0000\n"
 "Last-Translator: Dietmar Hohn <d.hohn@dance4fun.at>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -11,26 +11,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Textdomain-Support: yes\n"
-"Language: en_GB\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
 
-# @ wc_emailvalidation
 #: classes/class-woocommerce-email-validation.php:33
+#@ wc_emailvalidation
 msgid "Confirm Email Address"
 msgstr "E-Mail-Adresse Wiederholung "
 
-# @ wc_emailvalidation
 #: classes/class-woocommerce-email-validation.php:34
+#@ wc_emailvalidation
 msgctxt "placeholder"
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
 
-# @ wc_emailvalidation
 #: classes/class-woocommerce-email-validation.php:50
 #, php-format
+#@ wc_emailvalidation
 msgid "%1$sEmail addresses%2$s do not match."
 msgstr "%1$sE-Mail-Adresse%2$s ist nicht identisch."
+
