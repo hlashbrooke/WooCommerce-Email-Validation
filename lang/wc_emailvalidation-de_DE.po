@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Email Validation v1.2.1\n"
+"Project-Id-Version: WooCommerce Email Validation v1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-07-19 10:32:26+0000\n"
+"PO-Revision-Date: 2013-08-23 18:54:01+0000\n"
 "Last-Translator: Dietmar Hohn <d.hohn@dance4fun.at>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,9 +31,15 @@ msgctxt "placeholder"
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
 
-#: classes/class-woocommerce-email-validation.php:50
+#: classes/class-woocommerce-email-validation.php:52
 #, php-format
 #@ wc_emailvalidation
 msgid "%1$sEmail addresses%2$s do not match."
 msgstr "%1$sE-Mail-Adresse%2$s ist nicht identisch."
+
+#: classes/class-woocommerce-email-validation.php:58
+#, php-format
+#@ wc_emailvalidation
+msgid "%1$sEmail Address%2$s does not exist."
+msgstr "%1$sEmail Address%2$s nicht vorhanden."
 

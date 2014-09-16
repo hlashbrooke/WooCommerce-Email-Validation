@@ -17,13 +17,13 @@ class WooCommerce_Email_Validation {
 
 		// Handle localisation
 		$this->load_plugin_textdomain();
-		add_action( 'init', array( &$this, 'load_localisation' ), 0 );
+		add_action( 'init', array( $this, 'load_localisation' ), 0 );
 
 		// Add second email address field to checkout
-		add_filter( 'woocommerce_checkout_fields' , array( &$this , 'add_checkout_field' ) );
+		add_filter( 'woocommerce_checkout_fields' , array( $this , 'add_checkout_field' ) );
 
 		// Ensure email addresses match
-		add_filter( 'woocommerce_process_checkout_field_billing_email-2' , array( &$this , 'validate_email_address' ) );
+		add_filter( 'woocommerce_process_checkout_field_billing_email-2' , array( $this , 'validate_email_address' ) );
 
 	}
 
@@ -44,9 +44,11 @@ class WooCommerce_Email_Validation {
 	public function validate_email_address( $confirm_email ) {
 		global $woocommerce;
 
+		$email_mismatch = false;
 		$billing_email = $woocommerce->checkout->posted['billing_email'];
 
 		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
+			$email_mismatch = true;
 			$woocommerce->add_error( sprintf( __( '%1$sEmail addresses%2$s do not match.' , 'wc_emailvalidation' ) , '<strong>' , '</strong>' ) );
 		}
 
