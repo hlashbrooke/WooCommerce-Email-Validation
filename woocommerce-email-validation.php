@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: WooCommerce Email Validation
- * Version: 1.2.3
+ * Version: 1.2.4
  * Plugin URI: http://wordpress.org/plugins/woocommerce-email-validation/
  * Description: Adds a 'confirm email address' field to the WooCommerce checkout page.
  * Author: Hugh Lashbrooke

@@ -22,26 +22,38 @@ class WooCommerce_Email_Validation {
 		// Add second email address field to checkout
 		add_filter( 'woocommerce_checkout_fields' , array( $this , 'add_checkout_field' ) );
 
+		// Add default value to second email address field (for WC 2.2+)
+		add_filter( 'default_checkout_billing_email-2', array( $this, 'default_field_value' ), 10, 2 );
+
 		// Ensure email addresses match
 		add_filter( 'woocommerce_process_checkout_field_billing_email-2' , array( $this , 'validate_email_address' ) );
 
 	}
 
-	public function add_checkout_field( $fields ) {
+	public function add_checkout_field( $fields = array() ) {
 
 		$fields['billing']['billing_email-2'] = array(
 			'label' 			=> __( 'Confirm Email Address', 'wc_emailvalidation' ),
 			'placeholder' 		=> _x( 'Email Address', 'placeholder', 'wc_emailvalidation' ),
 			'required' 			=> true,
-			'class' 			=> array( 'form-row-first' ),
-			'clear'				=> true
+			'class' 			=> apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-first' ) ),
+			'clear'				=> true,
+			'validate'			=> array( 'email' ),
 		);
 
 		return $fields;
 
 	}
 
-	public function validate_email_address( $confirm_email ) {
+	public function default_field_value( $value = null, $field = 'billing_email-2' ) {
+		if ( is_user_logged_in() ) {
+			global $current_user;
+			$value = $current_user->user_email;
+		}
+		return $value;
+	}
+
+	public function validate_email_address( $confirm_email = '' ) {
 		global $woocommerce;
 
 		$email_mismatch = false;
