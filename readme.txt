@@ -43,7 +43,7 @@ This plugin adds the email confirmation to the checkout fields and does not affe
 == Changelog ==
 
 = 1.2.8 =
-* 2015-06-02
+* 2015-05-28
 * [UPDATE] Adding Serbian translation (translation provided by Nebojsa Dolas)
 
 = 1.2.7 =
