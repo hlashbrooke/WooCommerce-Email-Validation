@@ -56,12 +56,18 @@ class WooCommerce_Email_Validation {
 	public function validate_email_address( $confirm_email = '' ) {
 		global $woocommerce;
 
-		$email_mismatch = false;
 		$billing_email = $woocommerce->checkout->posted['billing_email'];
 
 		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
-			$email_mismatch = true;
-			$woocommerce->add_error( sprintf( __( '%1$sEmail addresses%2$s do not match.' , 'wc_emailvalidation' ) , '<strong>' , '</strong>' ) );
+
+			$notice = sprintf( __( '%1$sEmail addresses%2$s do not match.' , 'wc_emailvalidation' ) , '<strong>' , '</strong>' );
+
+			if ( version_compare( WC_VERSION, '2.3', '<' ) ) {
+				$woocommerce->add_error( $notice );
+			} else {
+				wc_add_notice( $notice, 'error' );
+			}
+
 		}
 
 		return $confirm_email;
