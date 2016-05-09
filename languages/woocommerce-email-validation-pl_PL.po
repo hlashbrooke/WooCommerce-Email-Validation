@@ -18,24 +18,24 @@ msgstr ""
 "Language: pl_PL\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:33
 msgid "Confirm Email Address"
 msgstr "Potwierdź E-mail"
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:34
 msgctxt "placeholder"
 msgid "Email Address"
 msgstr "Adres e-mail"
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:52
 #, php-format
 msgid "%1$sEmail addresses%2$s do not match."
 msgstr "%1$sAdresy e-mail%2$s nie pasują do siebie."
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:58
 #, php-format
 msgid "%1$sEmail Address%2$s does not exist."

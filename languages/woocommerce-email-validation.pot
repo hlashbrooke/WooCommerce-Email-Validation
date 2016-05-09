@@ -1,8 +1,8 @@
-# Copyright (C) 2015 WooCommerce Email Validation
+# Copyright (C) 2016 WooCommerce Email Validation
 # This file is distributed under the same license as the WooCommerce Email Validation package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Email Validation 1.2.7\n"
+"Project-Id-Version: WooCommerce Email Validation 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/woocommerce-email-validation\n"
 "POT-Creation-Date: 2015-02-16 06:15:12+00:00\n"
 "MIME-Version: 1.0\n"
@@ -12,34 +12,23 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: classes/class-woocommerce-email-validation.php:36
+#: classes/class-woocommerce-email-validation.php:41
 msgid "Confirm Email Address"
 msgstr ""
 
-#: classes/class-woocommerce-email-validation.php:37
+#: classes/class-woocommerce-email-validation.php:42
 msgctxt "placeholder"
 msgid "Email Address"
 msgstr ""
 
-#: classes/class-woocommerce-email-validation.php:63
+#: classes/class-woocommerce-email-validation.php:75
 msgid "%1$sEmail addresses%2$s do not match."
 msgstr ""
+
 #. Plugin Name of the plugin/theme
 msgid "WooCommerce Email Validation"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
-msgid "http://wordpress.org/plugins/woocommerce-email-validation/"
-msgstr ""
-
 #. Description of the plugin/theme
 msgid "Adds a 'confirm email address' field to the WooCommerce checkout page."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Hugh Lashbrooke"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://www.hughlashbrooke.com/"
 msgstr ""

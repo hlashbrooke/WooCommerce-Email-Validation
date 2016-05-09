@@ -1,45 +1,39 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Email Validation v1.3\n"
+"Project-Id-Version: WooCommerce Email Validation v1.2.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-08-23 18:52:25+0000\n"
-"Last-Translator: Marcelo Pedra <marcelo@marcelopedra.com.ar>\n"
+"PO-Revision-Date: 2014-05-20 23:26:30+0000\n"
+"Last-Translator: smallforest <amicamako@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.7\n"
-"X-Poedit-Language: \n"
-"X-Poedit-Country: \n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
 #: classes/class-woocommerce-email-validation.php:33
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "Confirm Email Address"
-msgstr "Confirmar Email "
+msgstr "メールアドレス(確認)"
 
 #: classes/class-woocommerce-email-validation.php:34
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgctxt "placeholder"
 msgid "Email Address"
-msgstr "Su email"
+msgstr "確認のためもう一度入力してください"
 
 #: classes/class-woocommerce-email-validation.php:52
 #, php-format
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "%1$sEmail addresses%2$s do not match."
-msgstr "%1$sLas direcciones de email%2$s no coinciden."
-
-#: classes/class-woocommerce-email-validation.php:58
-#, php-format
-#@ wc_emailvalidation
-msgid "%1$sEmail Address%2$s does not exist."
-msgstr "%1$sEmail Address%2$s no existe."
+msgstr "%1$sメールアドレス%2$sとメールアドレス（確認）が一致しません"
 

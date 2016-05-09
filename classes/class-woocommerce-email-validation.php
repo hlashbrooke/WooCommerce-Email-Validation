@@ -7,7 +7,6 @@ class WooCommerce_Email_Validation {
 	private $file;
 	private $assets_dir;
 	private $assets_url;
-	private $text_domain;
 
 	public function __construct( $file ) {
 		$this->dir = dirname( $file );
@@ -16,32 +15,45 @@ class WooCommerce_Email_Validation {
 		$this->assets_url = esc_url( trailingslashit( plugins_url( '/assets/', $file ) ) );
 
 		// Handle localisation
-		$this->load_plugin_textdomain();
-		add_action( 'init', array( $this, 'load_localisation' ), 0 );
+		add_action( 'plugins_loaded', array( $this, 'load_localisation' ) );
 
 		// Add second email address field to checkout
-		add_filter( 'woocommerce_checkout_fields' , array( $this , 'add_checkout_field' ) );
+		add_filter( 'woocommerce_billing_fields', array( $this, 'add_billing_field' ) );
 
 		// Add default value to second email address field (for WC 2.2+)
 		add_filter( 'default_checkout_billing_email-2', array( $this, 'default_field_value' ), 10, 2 );
 
 		// Ensure email addresses match
-		add_filter( 'woocommerce_process_checkout_field_billing_email-2' , array( $this , 'validate_email_address' ) );
+		add_filter( 'woocommerce_process_checkout_field_billing_email-2', array( $this, 'validate_email_address' ) );
 
 	}
 
-	public function add_checkout_field( $fields = array() ) {
+	public function add_billing_field( $fields = array() ) {
 
-		$fields['billing']['billing_email-2'] = array(
-			'label' 			=> __( 'Confirm Email Address', 'wc_emailvalidation' ),
-			'placeholder' 		=> _x( 'Email Address', 'placeholder', 'wc_emailvalidation' ),
-			'required' 			=> true,
-			'class' 			=> apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-first' ) ),
-			'clear'				=> true,
-			'validate'			=> array( 'email' ),
-		);
+		$return_fields = array();
 
-		return $fields;
+		foreach( $fields as $field_key => $field_data ) {
+
+			$return_fields[ $field_key ] = $field_data;
+
+			if( 'billing_email' == $field_key ) {
+				$return_fields['billing_email-2'] = array(
+					'label' 			=> __( 'Confirm Email Address', 'woocommerce-email-validation' ),
+					'placeholder' 		=> _x( 'Email Address', 'placeholder', 'woocommerce-email-validation' ),
+					'required' 			=> true,
+					'class' 			=> apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-last' ) ),
+					'clear'				=> true,
+					'validate'			=> array( 'email' ),
+				);
+			}
+
+		}
+
+		if( apply_filters( 'woocommerce_confirm_email_wide_phone_field', true ) ) {
+			$return_fields['billing_phone']['class'] = array( 'form-row-wide' );
+		}
+
+		return $return_fields;
 
 	}
 
@@ -60,7 +72,7 @@ class WooCommerce_Email_Validation {
 
 		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
 
-			$notice = sprintf( __( '%1$sEmail addresses%2$s do not match.' , 'wc_emailvalidation' ) , '<strong>' , '</strong>' );
+			$notice = sprintf( __( '%1$sEmail addresses%2$s do not match.' , 'woocommerce-email-validation' ) , '<strong>' , '</strong>' );
 
 			if ( version_compare( WC_VERSION, '2.3', '<' ) ) {
 				$woocommerce->add_error( $notice );
@@ -74,15 +86,7 @@ class WooCommerce_Email_Validation {
 	}
 
 	public function load_localisation () {
-		load_plugin_textdomain( 'wc_emailvalidation' , false , dirname( plugin_basename( $this->file ) ) . '/lang/' );
-	}
-
-	public function load_plugin_textdomain () {
-		$domain = 'wc_emailvalidation';
-	    $locale = apply_filters( 'plugin_locale' , get_locale() , $domain );
-
-	    load_textdomain( $domain , WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-	    load_plugin_textdomain( $domain , FALSE , dirname( plugin_basename( $this->file ) ) . '/lang/' );
+		load_plugin_textdomain( 'woocommerce-email-validation', false, basename( dirname( $this->file ) ) . '/languages/' );
 	}
 
 }

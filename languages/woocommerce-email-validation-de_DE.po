@@ -21,25 +21,25 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: classes/class-woocommerce-email-validation.php:33
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "Confirm Email Address"
 msgstr "E-Mail-Adresse Wiederholung "
 
 #: classes/class-woocommerce-email-validation.php:34
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgctxt "placeholder"
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
 
 #: classes/class-woocommerce-email-validation.php:52
 #, php-format
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "%1$sEmail addresses%2$s do not match."
 msgstr "%1$sE-Mail-Adresse%2$s ist nicht identisch."
 
 #: classes/class-woocommerce-email-validation.php:58
 #, php-format
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "%1$sEmail Address%2$s does not exist."
 msgstr "%1$sEmail Address%2$s nicht vorhanden."
 

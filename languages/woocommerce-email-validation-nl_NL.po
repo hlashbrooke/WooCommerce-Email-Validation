@@ -21,19 +21,19 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: classes/class-woocommerce-email-validation.php:33
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "Confirm Email Address"
 msgstr "Bevestig E-mailadres"
 
 #: classes/class-woocommerce-email-validation.php:34
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgctxt "placeholder"
 msgid "Email Address"
 msgstr "E-mailadres "
 
 #: classes/class-woocommerce-email-validation.php:50
 #, php-format
-#@ wc_emailvalidation
+#@ woocommerce-email-validation
 msgid "%1$sEmail addresses%2$s do not match."
 msgstr "%1$sE-mailadressen%2$s komen niet overeen."
 

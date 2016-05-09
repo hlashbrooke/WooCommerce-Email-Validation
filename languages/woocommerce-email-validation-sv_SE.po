@@ -19,18 +19,18 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:33
 msgid "Confirm Email Address"
 msgstr "Bekräfta e-postadressen"
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:34
 msgctxt "placeholder"
 msgid "Email Address"
 msgstr "E-postadress"
 
-# @ wc_emailvalidation
+# @ woocommerce-email-validation
 #: classes/class-woocommerce-email-validation.php:52
 #, php-format
 msgid "%1$sEmail addresses%2$s do not match."
