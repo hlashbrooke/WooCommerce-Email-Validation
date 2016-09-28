@@ -1,8 +1,8 @@
 === WooCommerce Email Validation ===
 Contributors: hlashbrooke
-Tags: woocommerce, email, validation, checkout
+Tags: woocommerce, email, address, validation, checkout, fields
 Requires at least: 4.0
-Tested up to: 4.5.2
+Tested up to: 4.6.1
 Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,10 @@ Installing "WooCommerce Email Validation" can be done either by searching for "W
 
 This plugin adds the email confirmation to the checkout fields right after the existing 'Email Address' field. If you would like to rearrange the checkout fields, then you are able to do so very easily by using the snippet provided [here](http://wordpress.stackexchange.com/questions/78339/how-to-reorder-billing-fields-in-woocommerce-checkout-template). The label/ID of the email confirmation field is `billing_email-2`.
 
+= This plugin doesn't work with the Checkout Field Editor extension - what gives? =
+
+If you are using Checkout Field Editor then you need to manually specify the second email address field in that extension's settings in order for the field to be displayed. The field ID that you must specify is `billing_email-2`.
+
 == Screenshots ==
 
 1. The 'Confirm Email Address' field as it is displayed in the Twenty Twelve theme (from v2.0 of this plugin, the new field appears alongside the existing 'Email Address' field).
@@ -44,7 +48,7 @@ This plugin adds the email confirmation to the checkout fields right after the e
 = 2.0 =
 * 2016-05-09
 * [UPDATE] Moving 'Confirm Email Address' field to the correct location on the checkout form
-* [UPDATE] Modifying text domain to match plugin slug (required fror centralised localisation)
+* [UPDATE] Modifying text domain to match plugin slug (required for centralised localisation)
 * [TWEAK] Changing filter on which new field is added to make things more streamlined
 
 = 1.2.8 =
