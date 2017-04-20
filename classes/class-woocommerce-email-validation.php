@@ -68,7 +68,8 @@ class WooCommerce_Email_Validation {
 	public function validate_email_address( $confirm_email = '' ) {
 		global $woocommerce;
 
-		$billing_email = $woocommerce->checkout->posted['billing_email'];
+		$checkout = new WC_Checkout;
+		$billing_email = $checkout->get_value('billing_email');
 
 		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
 
