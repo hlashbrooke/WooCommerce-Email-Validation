@@ -37,6 +37,7 @@ class WooCommerce_Email_Validation {
 			$return_fields[ $field_key ] = $field_data;
 
 			if( 'billing_email' == $field_key ) {
+				$return_fields['billing_email']['class']=apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-first' ) );
 				$return_fields['billing_email-2'] = array(
 					'label' 			=> __( 'Confirm Email Address', 'woocommerce-email-validation' ),
 					'placeholder' 		=> _x( 'Email Address', 'placeholder', 'woocommerce-email-validation' ),
