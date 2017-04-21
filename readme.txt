@@ -2,8 +2,8 @@
 Contributors: hlashbrooke
 Tags: woocommerce, email, address, validation, checkout, fields
 Requires at least: 4.0
-Tested up to: 4.6.1
-Stable tag: 2.0
+Tested up to: 4.7.4
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Adds a 'confirm email address' field to the WooCommerce checkout page.
 
 "WooCommerce Email Validation" is an extension for WooCommerce that adds a 'confirm email address' field to the checkout page as a required field. This will ensure that your customers will enter a correct email address, making managing your orders far easier and more reliable. If a customer's email address does not match up then they will receive a standard validation error on the checkout page informing them that they need to make sure that their email addresses are the same.
 
-This extension is WooCommerce 2.x compatible and supports localisation using WPML. It has built-in translations for English, German, Spanish, Dutch, Swedish, Japanese, Polish, Brazilian Portuguese, Hungarian and Serbian.
+This extension is WooCommerce 3.x compatible and supports localisation using WPML. It has built-in translations for English, German, Spanish, Dutch, Swedish, Japanese, Polish, Brazilian Portuguese, Hungarian and Serbian.
 
 Want to contribute? [Fork the GitHub repository](https://github.com/hlashbrooke/Woocommerce-Email-Validation).
 
@@ -44,6 +44,12 @@ If you are using Checkout Field Editor then you need to manually specify the sec
 1. The 'Confirm Email Address' field as it is displayed in the Twenty Twelve theme (from v2.0 of this plugin, the new field appears alongside the existing 'Email Address' field).
 
 == Changelog ==
+
+= 2.1 =
+* 2017-04-21
+* [UPDATE] Adding WooCommerce 3.0+ compatibility (props [ablears](https://github.com/ablears))
+* [UPDATE] Ensuring backwards compatilibity for versions of WooCommerce prior to 3.0
+* [UPDATE] Adding `woocommerce_original_email_field_class` filter for modifying layout of fields on the fly
 
 = 2.0 =
 * 2016-05-09
@@ -100,5 +106,5 @@ If you are using Checkout Field Editor then you need to manually specify the sec
 
 == Upgrade Notice ==
 
-= 2.0 =
-* Confirm email fields is now displayed in the correct location and other fields are adjusted accordingly (if you have manually reordered the checkout fields already then make sure to test after updating). Translation is now even easier.
+= 2.1 =
+* This update ensures compatibility with WooCommerce 3.0 (while mainting backwards compatibility for prior verion) - if you have disabled the plugin temporarily because it was not work ing in WooCommerce 3.0, then you can re-enable it after this update.
