@@ -37,10 +37,12 @@ class WooCommerce_Email_Validation {
 			$return_fields[ $field_key ] = $field_data;
 
 			if( 'billing_email' == $field_key ) {
-				$return_fields['billing_email']['class']=apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-first' ) );
+
+				$return_fields['billing_email']['class'] = apply_filters( 'woocommerce_original_email_field_class', array( 'form-row-first' ) );
+
 				$return_fields['billing_email-2'] = array(
 					'label' 			=> __( 'Confirm Email Address', 'woocommerce-email-validation' ),
-					'placeholder' 		=> _x( 'Email Address', 'placeholder', 'woocommerce-email-validation' ),
+					'placeholder' 			=> _x( 'Email Address', 'placeholder', 'woocommerce-email-validation' ),
 					'required' 			=> true,
 					'class' 			=> apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-last' ) ),
 					'clear'				=> true,
@@ -69,8 +71,13 @@ class WooCommerce_Email_Validation {
 	public function validate_email_address( $confirm_email = '' ) {
 		global $woocommerce;
 
-		$checkout = new WC_Checkout;
-		$billing_email = $checkout->get_value('billing_email');
+		// Use new checkout object for WC 3.0+
+		if ( version_compare( WC_VERSION, '3.0', '<' ) ) {
+			$billing_email = $woocommerce->checkout->posted['billing_email'];
+		} else {
+			$checkout = new WC_Checkout;
+			$billing_email = $checkout->get_value('billing_email');	
+		}
 
 		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
 
