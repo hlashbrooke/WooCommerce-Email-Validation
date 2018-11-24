@@ -47,6 +47,9 @@ class WooCommerce_Email_Validation {
 					'class' 			=> apply_filters( 'woocommerce_confirm_email_field_class', array( 'form-row-last' ) ),
 					'clear'				=> true,
 					'validate'			=> array( 'email' ),
+					
+					// add priority value to second email address field (for WC 3.5+) 
+					'priority'			=> isset($return_fields['billing_email']['priority']) ? $return_fields['billing_email']['priority'] + 10 : 0,
 				);
 			}
 
