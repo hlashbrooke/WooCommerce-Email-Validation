@@ -49,7 +49,7 @@ class WooCommerce_Email_Validation {
 					'validate'			=> array( 'email' ),
 					
 					// add priority value to second email address field (for WC 3.5+) 
-					'priority'			=> isset($return_fields['billing_email']['priority']) ? $return_fields['billing_email']['priority'] + 10 : 0,
+					'priority'			=> isset($return_fields['billing_email']['priority']) ? $return_fields['billing_email']['priority'] + 1 : 0,
 				);
 			}
 
