@@ -2,8 +2,8 @@
 Contributors: hlashbrooke
 Tags: woocommerce, email, address, validation, checkout, fields
 Requires at least: 4.0
-Tested up to: 4.7.4
-Stable tag: 2.1
+Tested up to: 4.9.8
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,10 @@ If you are using Checkout Field Editor then you need to manually specify the sec
 1. The 'Confirm Email Address' field as it is displayed in the Twenty Twelve theme (from v2.0 of this plugin, the new field appears alongside the existing 'Email Address' field).
 
 == Changelog ==
+
+= 2.1.1 =
+* 2018-11-26
+* [UPDATE] Adding WooCommerce 3.5+ compatibility (props [heocoi](https://github.com/heocoi))
 
 = 2.1 =
 * 2017-04-21
@@ -106,5 +110,5 @@ If you are using Checkout Field Editor then you need to manually specify the sec
 
 == Upgrade Notice ==
 
-= 2.1 =
-* This update ensures compatibility with WooCommerce 3.0 (while mainting backwards compatibility for prior verion) - if you have disabled the plugin temporarily because it was not work ing in WooCommerce 3.0, then you can re-enable it after this update.
+= 2.1.1 =
+* This update ensures compatibility with WooCommerce 3.5+ (while mainting backwards compatibility for prior verions) - if you have disabled the plugin temporarily because it was not working correctly in WooCommerce 3.5, then you can re-enable it after this update.
