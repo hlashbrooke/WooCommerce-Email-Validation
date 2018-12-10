@@ -41,7 +41,7 @@ If you are using Checkout Field Editor then you need to manually specify the sec
 
 == Screenshots ==
 
-1. The 'Confirm Email Address' field as it is displayed in the Twenty Nineteen theme.
+1. The 'Confirm Email Address' field as it is displayed in the Storefront theme.
 
 == Changelog ==
 
