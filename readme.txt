@@ -2,7 +2,7 @@
 Contributors: hlashbrooke
 Tags: woocommerce, email, address, validation, checkout, fields
 Requires at least: 4.0
-Tested up to: 4.9.8
+Tested up to: 5.0
 Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -33,15 +33,15 @@ Installing "WooCommerce Email Validation" can be done either by searching for "W
 
 = How do I reorder the checkout fields? =
 
-This plugin adds the email confirmation to the checkout fields right after the existing 'Email Address' field. If you would like to rearrange the checkout fields, then you are able to do so very easily by using the snippet provided [here](http://wordpress.stackexchange.com/questions/78339/how-to-reorder-billing-fields-in-woocommerce-checkout-template). The label/ID of the email confirmation field is `billing_email-2`.
+This plugin adds the email confirmation to the checkout fields right after the existing 'Email Address' field. If you would like to rearrange the checkout fields, then you are able to do so very easily by using the snippet provided [here](http://wordpress.stackexchange.com/questions/78339/how-to-reorder-billing-fields-in-woocommerce-checkout-template). The label/ID of the email confirmation field is `billing_email-2` (note that there is a hyphen before the `2` and not an underscore).
 
 = This plugin doesn't work with the Checkout Field Editor extension - what gives? =
 
-If you are using Checkout Field Editor then you need to manually specify the second email address field in that extension's settings in order for the field to be displayed. The field ID that you must specify is `billing_email-2`.
+If you are using Checkout Field Editor then you need to manually specify the second email address field in that extension's settings in order for the field to be displayed. The field ID that you must specify is `billing_email-2` (note that there is a hyphen before the `2` and not an underscore).
 
 == Screenshots ==
 
-1. The 'Confirm Email Address' field as it is displayed in the Twenty Twelve theme (from v2.0 of this plugin, the new field appears alongside the existing 'Email Address' field).
+1. The 'Confirm Email Address' field as it is displayed in the Twenty Nineteen theme.
 
 == Changelog ==
 

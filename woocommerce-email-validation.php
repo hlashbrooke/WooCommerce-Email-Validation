@@ -7,7 +7,7 @@
  * Author: Hugh Lashbrooke
  * Author URI: https://hugh.blog/
  * Requires at least: 4.0
- * Tested up to: 4.9.8
+ * Tested up to: 5.0
  *
  * Text domain: woocommerce-email-validation
  * Domain path: /languages/
