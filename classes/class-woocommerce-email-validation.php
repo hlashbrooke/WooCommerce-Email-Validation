@@ -81,6 +81,11 @@ class WooCommerce_Email_Validation {
 			$checkout = new WC_Checkout;
 			$billing_email = $checkout->get_value('billing_email');	
 		}
+		
+		// skip validation if payment request buttons are used on checkout page
+		if ( ! empty( $_POST['payment_request_type'] ) ) {
+			return $billing_email;
+		}
 
 		if( strtolower( $confirm_email ) != strtolower( $billing_email ) ) {
 
